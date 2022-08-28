@@ -18,22 +18,22 @@ const Theme = {
   LIGHT: 'light-theme',
   DARK: 'dark-theme',
 };
-let currentTema = Theme.LIGHT;
-body.classList.add(currentTema);
+let currentTheme = Theme.LIGHT;
+body.classList.add(currentTheme);
 
 
 
 checkBoxToolBar.addEventListener('change', (e) => { 
   body.classList.toggle(Theme.LIGHT);
   body.classList.toggle(Theme.DARK); 
-  localStorage.setItem('tema', body.classList[0]);
+  localStorage.setItem('template', body.classList[0]);
 });
 
-localStorage.getItem('tema');
-currentTema = localStorage.getItem('tema');
+localStorage.getItem('template');
+currentTheme = localStorage.getItem('template');
 
-if (currentTema === Theme.DARK) {
-  body.classList.replace(Theme.LIGHT, currentTema);
+if (currentTheme === Theme.DARK) {
+  body.classList.replace(Theme.LIGHT, currentTheme);
   checkBoxToolBar.checked = true;
 }
 
